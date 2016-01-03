@@ -50,6 +50,8 @@ var _              = require('lodash'),
                     files: [
                         'content/themes/casper/assets/css/*.css',
                         'content/themes/casper/assets/js/*.js',
+                        'content/themes/ronnerdahl-casper/assets/css/*.css',
+                        'content/themes/ronnerdahl-casper/assets/js/*.js',
                         'core/built/assets/*.js',
                         'core/client/dist/index.html'
                     ],
