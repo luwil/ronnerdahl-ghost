@@ -1,12 +1,13 @@
 .jumbotron {
-		margin-top: -30px;
-		margin-bottom: 30px;
-		border-bottom: 0;
-		padding-top:5px;
-		padding-bottom: 35px;
-		border-radius: 0;
-  	text-align: center;
+    margin-top: -30px;
+    margin-bottom: 30px;
+    border-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 35px;
+    border-radius: 0;
+    text-align: center;
 }
+
 .pagination {
     position: relative;
     width: 100%;
@@ -16,13 +17,16 @@
     color: #9EABB3;
     text-align: center;
 }
+
 .pagination a {
     color: #9EABB3;
     transition: all 0.2s ease;
 }
+
 .pagination a:hover {
     text-decoration: none;
 }
+
 .older-posts,
 .newer-posts {
     position: absolute;
@@ -33,26 +37,32 @@
     border-radius: 4px;
     transition: border 0.3s ease;
 }
+
 .page-number {
     display: inline-block;
     padding: 2px 0;
     min-width: 100px;
 }
+
 .older-posts {
     right: 0;
 }
+
 .newer-posts {
     left: 0;
 }
+
 .older-posts:hover,
 .newer-posts:hover {
     color: #889093;
     border-color: #98a0a4;
 }
+
 .extra-pagination {
     display: none;
     border-bottom: #EBF2F6 1px solid;
 }
+
 .extra-pagination:after {
     display: block;
     content: "";
@@ -67,9 +77,11 @@
     border-radius: 100%;
     box-shadow: #FFF 0 0 0 5px;
 }
+
 .extra-pagination .pagination {
     width: auto;
 }
+
 @media only screen and (max-width: 500px) {
     .pagination {
         width: auto;
