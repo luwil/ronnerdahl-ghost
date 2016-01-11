@@ -23,26 +23,34 @@
 </head>
 <body class="{{body_class}} nav-closed">
 
+>>> default.hbs nav
     {{navigation}}
+>>> default.hbs nav END
 
     <div class="site-wrapper">
 
         {{! Everything else gets inserted here }}
+        >>> default.hbs body
         {{{body}}}
+        >>> default.hbs body END
 
         <footer class="site-footer clearfix">
             <section class="copyright"><a href="{{@blog.url}}">{{@blog.title}}</a> &copy; {{date format="YYYY"}}</section>
             <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
         </footer>
-
+        >>> default.hbs footer END
     </div>
+        >>> default.hbs site-wrapper END
 
-    {{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+{{!-- jQuery needs to come before `{{ghost_foot}}` so that jQuery can be used in code injection --}}
+<!--TODO take back jquery here-->
+<!--<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>-->
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
+>>> default.hbs ghost_foot END
 
     <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/jquery.js"}}"></script>
     {{! The main JavaScript file for Casper }}
     <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
 

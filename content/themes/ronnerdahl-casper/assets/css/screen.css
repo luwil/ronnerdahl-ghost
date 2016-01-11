@@ -943,9 +943,29 @@ body.nav-opened .nav {
 body:not(.post-template) .post-title {
     font-size: 3.6rem;
 }
+body:not(.post-template) .post-title a{
+    font-size: 3.6rem;
+    color: deeppink;
+}
+
+#kaka-test-id {
+    font-size: 3.6rem;
+    color: deeppink !important;
+
+    rotation: 30deg;
+    rotation-point: center;
+}
 
 .post-title a {
     text-decoration: none;
+}
+.post-title:after {
+    content: 'hey caramba';
+    text-decoration: none;
+    color: #00A000;
+    margin-left: 20px;
+    rotation: 30deg;
+    rotation-point: center;
 }
 
 .post-excerpt p {
