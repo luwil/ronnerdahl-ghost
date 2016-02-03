@@ -1,5 +1,8 @@
-<ul class="rd-nav-main-menu">
+<!-- Ghost will load this instead of it's default template -->
+<ul class="nav navbar-nav">
     {{#foreach navigation}}
-        <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+        <li class="{{#if current}} active{{/if}}">
+            <a href="{{url absolute="true"}}">{{label}}</a>
+        </li>
     {{/foreach}}
 </ul>
