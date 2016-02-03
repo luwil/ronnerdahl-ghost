@@ -1,0 +1,13 @@
+<h5>Older posts</h5>
+{{#get "posts"}}
+    {{#foreach posts}}
+        <!--TODO style active post-->
+        <a href="{{url}}" title="{{{title}}}">{{{title}}}</a> -
+        <span class="text-muted">
+                            <time class="post-date"
+                                  datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+                        </span>
+
+        <br>
+    {{/foreach}}
+{{/get}}

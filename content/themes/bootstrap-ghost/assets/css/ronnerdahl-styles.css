@@ -1,3 +1,7 @@
 img {
     width: 100%;
 }
+
+ul.rd-nav-main-menu li {
+    display: inline;
+}
