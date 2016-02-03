@@ -1,0 +1,28 @@
+{{!< default}}
+{{! Top line inserts this template on main layout}}
+
+{{! Main Tag content section}}
+<main id="main-asnd">
+
+	<section id="tag-author-page-section-asnd">
+		<h1>
+			<span>{{plural pagination.total empty='No posts' singular='% post' plural='% posts'}} under</span>
+			<br>
+			{{tag.name}}
+		</h1>
+		
+		<a href="{{@blog.url}}/tag/{{tag.slug}}/rss/" class="subscribe-to-it">
+			<span class="fa fa-rss"></span> Subscribe to {{tag.name}}
+		</a>
+	</section>
+
+	{{! Pagination top links - displayed on paged temmplates}}
+	<div id="top-paged-nav-asnd">
+	{{pagination}}
+	</div>
+
+	{{> loop}}
+	
+	{{! Pagination links - displayed on every page}}
+	{{pagination}}
+</main>

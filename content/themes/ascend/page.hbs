@@ -1,0 +1,23 @@
+{{!< default}}
+{{! Top line inserts this template on main layout}}
+
+{{! Page template }}
+{{#post}}
+<main id="main-asnd">
+	<article id="post-page-asnd" class="{{post_class}}">
+		
+		<header class="post-header">
+			{{#if image}}
+			<img src="{{image}}" alt="{{title}}">
+			{{/if}}
+			
+			<h1>{{title}}</h1>
+		</header>
+
+		<section id="post-content-asnd">
+			{{content}}
+		</section>
+
+	</article>
+</main>
+{{/post}}

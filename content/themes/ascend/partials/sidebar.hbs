@@ -1,0 +1,35 @@
+<header id="main-head-asnd">
+	
+	<span id="mobile-menu-ignite-asnd" class="fa fa-reorder"></span>
+
+	<div id="head-wrapper-asnd">
+		
+		{{! Applying a better designed scrollbar via nanoScroller}}
+		<div class="nano"><div class="nano-content">
+
+			{{#if @blog.logo}}
+			<a href="{{@blog.url}}">
+			<img id="main-logo-asnd" src="{{@blog.logo}}" alt="{{@blog.title}}">
+			</a>
+			{{else}}
+			<h1 id="main-name-asnd"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+			{{/if}}
+
+			{{#if @blog.description}}
+			<p id="the-description-asnd">
+				{{@blog.description}}
+			</p>
+			{{/if}}
+
+			<nav id="main-nav-asnd">
+				{{navigation}}
+				<section id="dynasocial-links"></section>
+			</nav>
+
+			{{! .dynawidgets-area are the default containers for dynamic widget insertions}}
+			<section class="dynawidgets-area" data-dynaarea_name="footer"></section>
+
+		</div></div>
+
+	</div>
+</header>
