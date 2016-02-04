@@ -9,3 +9,29 @@ ul.rd-nav-main-menu li {
 .test-md-kaka {
     background-color: #00A000;
 }
+
+.prev-post, .next-post {
+    display: inline-block;
+    text-decoration: none;
+    padding: .4rem 1.4rem;
+    border: #bfc8cd 1px solid;
+    border-radius: 4px;
+    transition: border ease 0.3s;
+}
+
+.prev-post:hover, .next-post:hover {
+    color: #889093;
+    border-color: #98a0a4;
+}
+
+.prev-post {
+    float: left;
+}
+
+.next-post {
+    float: right;
+}
+
+.post-next-prev {
+    margin-bottom: 15px;
+}
