@@ -1,0 +1,16 @@
+/*
+    Main file to be compiled by sass
+*/
+
+// Own variables
+@import "rd-variables";
+
+// Own bootstrap overrides
+@import "rd-bootstrap";
+
+// Own styling
+@import "rd-instafeed";
+@import "rd-style";
+
+// Bootstrap and all of its dependencies
+@import "_bootstrap";

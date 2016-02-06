@@ -1,9 +1,8 @@
-<section class="post-next-prev">
+<section class="post-next-prev clearfix">
     {{#previous}}
-        <a class="prev-post" href="{{url}}">← {{title}}</a>
+        <a class="btn btn-default prev-post pull-left" href="{{url}}">← {{title}}</a>
     {{/previous}}
     {{#next}}
-        <a class="next-post" href="{{url}}">{{title}} →</a>
+        <a class="btn btn-default next-post pull-right" href="{{url}}">{{title}} →</a>
     {{/next}}
-    <div class="clearfix"></div>
 </section>

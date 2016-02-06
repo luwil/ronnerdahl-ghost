@@ -53,7 +53,8 @@ var _              = require('lodash'),
                         'content/themes/ronnerdahl-casper/assets/css/*.css',
                         'content/themes/ronnerdahl-casper/assets/js/*.js',
                         'core/built/assets/*.js',
-                        'core/client/dist/index.html'
+                        'core/client/dist/index.html',
+                        'content/themes/bootstrap-ghost/assets/css/*.css'
                     ],
                     options: {
                         livereload: true
@@ -435,7 +436,14 @@ var _              = require('lodash'),
                         'core/shared/ghost-url.min.js': 'core/shared/ghost-url.js'
                     }
                 }
-            }
+            },
+            sass: {
+                dist: {
+                    files: {
+                        'content/themes/bootstrap-ghost/assets/css/style.css': 'content/themes/bootstrap-ghost/assets/sass/main.scss'
+                    }
+                }
+            },
         };
 
         // Load the configuration
@@ -927,6 +935,13 @@ var _              = require('lodash'),
         // It is otherwise the same as running `grunt`, but is only used when running Ghost in the `production` env.
         grunt.registerTask('prod', 'Build JS & templates for production',
             ['shell:ember:prod', 'uglify:prod']);
+
+        // ### Build sass files
+        //
+        // Vad gör egentligen kodraden nedan????!??!?!?!?!??!?!`?!?!!?
+        grunt.loadNpmTasks('grunt-contrib-sass');
+        grunt.registerTask('default', 'Build JS, SASS & templates for development',
+            ['sass']);
 
         // ### Live reload
         // `grunt dev` - build assets on the fly whilst developing

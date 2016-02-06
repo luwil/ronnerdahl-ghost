@@ -12,9 +12,9 @@ var feed = new Instafeed({
     target: 'instafeed',
     get: 'user',
     userId: '2734436307',
-    template: '<a href="{{link}}"><img src="{{image}}" /></a>"{{caption}}"',
+    template: '<div class="polaroid"><a href="{{link}}"><img src="{{image}}" />{{caption}}</a></div>',
     clientId: 'see doc',
-    accessToken: 'see doc',
+    accessToken: 'see doc'
 });
 
 feed.run();

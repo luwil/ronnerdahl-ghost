@@ -1,0 +1,53 @@
+//== Instafeed polaroid styling
+#instafeed {
+
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .polaroid {
+        font-family: $rd-polaroid-font-family;
+        background-color: $rd-polaroid-bg;
+        padding: 10px;
+        margin-bottom: 7px;
+        //TODO: USE MIXIN... Same Border for all elements?
+        border-radius: 2px 2px 2px 2px;
+        -moz-border-radius: 2px 2px 2px 2px;
+        -webkit-border-radius: 2px 2px 2px 2px;
+
+        img {
+            //TODO: USE MIXIN... Same Border for all elements?
+            border-radius: 2px 2px 2px 2px;
+            -moz-border-radius: 2px 2px 2px 2px;
+            -webkit-border-radius: 2px 2px 2px 2px;
+            margin-bottom: 10px;
+        }
+
+        a {
+            //TODO: USE VARIABLE
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+    //TODO: USE IN instafeed scope
+    .polaroid:nth-child(odd) {
+        transform: translateX(-50px);
+        -ms-transform: rotate(5deg); /* IE 9 */
+        -webkit-transform: rotate(5deg); /* Safari */
+        transform: rotate(5deg);
+        -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    //TODO: USE IN instafeed scope
+    .polaroid:nth-child(even) {
+        transform: translateX(2px);
+        -ms-transform: rotate(-3deg); /* IE 9 */
+        -webkit-transform: rotate(-3deg); /* Safari */
+        transform: rotate(-3deg);
+        -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+        -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+    }
+}
