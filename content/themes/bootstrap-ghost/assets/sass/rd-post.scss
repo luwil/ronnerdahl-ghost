@@ -1,0 +1,15 @@
+//== Post styling
+article {
+
+    // Affects cover image and images in blog post.
+    // TODO: Use different styling for cover image and images in blog post
+    img {
+        width: 100%;
+    }
+
+    .post-next-prev {
+        //TODO: Maybe use standard margin for buttons etc. Use in variables
+        margin-bottom: 15px;
+
+    }
+}

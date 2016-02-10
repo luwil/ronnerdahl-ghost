@@ -22,9 +22,8 @@
         <link href='https://fonts.googleapis.com/css?family=Quando' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Judson:400,700,400italic' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-        <!-- Testing polaroid font -->
-        <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+
+        <!--<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>-->
 
         {{! Ghost outputs important style and meta data with this tag }}
         {{ghost_head}}
@@ -44,6 +43,11 @@
     <script type="text/javascript" src="{{asset "js/bootstrap.min.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/instafeed.js"}}"></script>
     <script type="text/javascript" src="{{asset "js/rd-instafeed.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/rd-map.js"}}"></script>
+
+    <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=SEEDOC&callback=initMap">
+    </script>
 
     {{! The main JavaScript file for Bootstrap Skeleton }}
     {{> analytics}}

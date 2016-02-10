@@ -1,11 +1,32 @@
 //Bootstrap overrides
 
 //== Colors
-$rd-body-bg: #FFFAE6;
+$rd-body-bg: #F9F9F9;
 $rd-polaroid-bg: #FFFFFD;
 
+$rd-headings-color: #3C3C3C;
+$rd-headings-color-darken: darken($rd-headings-color, 20%);
+
+$rd-paragraph-color: #3C3C3C;
+
+//Sizes
+$rd-map-height: 250px;
+$rd-map-width: 250px;
+
+$rd-navbar-height:60px;
+$rd-navbar-text-padding-top: $rd-navbar-height/3;
+
+
+//TODO: Use this link to generate scss for navbar
+//http://work.smarchal.com/twbscolor/css/e74c3cc0392becf0f1ffbbbc0
+//http://stackoverflow.com/questions/18529274/change-navbar-color-in-twitter-bootstrap-3
 
 //== Typography
-$rd-headings-font-family: 'Quando', serif;
-$rd-standard-font-family:  Judson, "Helvetica Neue", Helvetica, Arial, sans-serif;
-$rd-polaroid-font-family: 'Indie Flower', cursive;
+@font-face {
+    font-family: 'Indie Flower';
+    src: url('../fonts/IndieFlower.ttf');
+}
+
+$rd-headings-font-family: 'Quando', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$rd-standard-font-family:  Judson, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$rd-polaroid-font-family: 'Indie Flower', 'Helvetica Neue', Helvetica, Arial, sans-serif;

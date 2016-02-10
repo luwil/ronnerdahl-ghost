@@ -7,3 +7,27 @@ $body-bg: $rd-body-bg;
 $font-family-sans-serif:  $rd-standard-font-family;
 $font-family-serif:       $rd-standard-font-family;
 $headings-font-family:    $rd-headings-font-family;
+
+//==Navbar
+.navbar {
+    margin-bottom: 0 !important;
+    height: $rd-navbar-height;
+
+    a, .navbar-brand {
+        padding-top:$rd-navbar-text-padding-top !important;
+        height: $rd-navbar-height;
+    }
+}
+
+
+
+//==Headings
+h1, h2, h3, h4, h5, h6 {
+    a {
+        color: $rd-headings-color;
+        &:hover, &:active, &:focus {
+            text-decoration: none;
+            color: $rd-headings-color-darken;
+        }
+    }
+}

@@ -1,53 +1,116 @@
 //== Instafeed polaroid styling
 #instafeed {
+    //TODO: USE VARIABLE
+    margin-top:50px;
 
-    padding-left: 20px;
-    padding-right: 20px;
+    .polaroid-container {
+        position:relative;
+        .tape {
+            position:absolute;
+            top:-15px;
+            height: 40px;
+            background-color:#fff;
+            opacity:0.6;
+            border-left: 1px dashed rgba(0, 0, 0, 0.1);
+            border-right: 1px dashed rgba(0, 0, 0, 0.1);
+            -webkit-box-shadow: 0px 0px 1px 0px #cccccc;
+            -moz-box-shadow: 0px 0px 1px 0px #cccccc;
+            box-shadow: 0px 0px 1px 0px #cccccc;
 
-    .polaroid {
-        font-family: $rd-polaroid-font-family;
-        background-color: $rd-polaroid-bg;
-        padding: 10px;
-        margin-bottom: 7px;
-        //TODO: USE MIXIN... Same Border for all elements?
-        border-radius: 2px 2px 2px 2px;
-        -moz-border-radius: 2px 2px 2px 2px;
-        -webkit-border-radius: 2px 2px 2px 2px;
+            &:nth-child(odd){
+                width: 50%;
+                right:60px;
+                -webkit-transform: rotate(-2deg) skew(0,0) translate(0%,-5px);
+                -moz-transform: rotate(-2deg) skew(0,0) translate(0%,-5px);
+                -o-transform: rotate(-2deg) skew(0,0) translate(0%,-5px);
+                transform: rotate(-2deg) skew(0,0) translate(0%,-5px);
+            }
 
-        img {
-            //TODO: USE MIXIN... Same Border for all elements?
-            border-radius: 2px 2px 2px 2px;
-            -moz-border-radius: 2px 2px 2px 2px;
-            -webkit-border-radius: 2px 2px 2px 2px;
-            margin-bottom: 10px;
+            &:nth-child(even){
+                width:40%;
+                right:70px;
+                -webkit-transform: rotate(-2deg) skew(0,0) translate(0%,-5px);
+                -moz-transform: rotate(-2deg) skew(0,0) translate(0%,-5px);
+                -o-transform: rotate(-2deg) skew(0,0) translate(0%,-5px);
+                transform: rotate(-2deg) skew(0,0) translate(0%,-5px);
+            }
+
         }
 
-        a {
-            //TODO: USE VARIABLE
-            color: black;
-            text-decoration: none;
+        &:nth-child(odd) {
+            padding-left: 20px;
+            -ms-transform: rotate(5deg); /* IE 9 */
+            -webkit-transform: rotate(5deg); /* Safari */
+            transform: rotate(5deg);
+            margin-bottom:15px;
         }
-    }
 
-    //TODO: USE IN instafeed scope
-    .polaroid:nth-child(odd) {
-        transform: translateX(-50px);
-        -ms-transform: rotate(5deg); /* IE 9 */
-        -webkit-transform: rotate(5deg); /* Safari */
-        transform: rotate(5deg);
-        -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
-        box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
-    }
+        &:nth-child(even) {
+            padding-left:30px;
+            -ms-transform: rotate(-3deg); /* IE 9 */
+            -webkit-transform: rotate(-3deg); /* Safari */
+            transform: rotate(-3deg);
+            margin-bottom:20px;
+        }
+        .polaroid {
+            font-family: $rd-polaroid-font-family;
+            background-color: $rd-polaroid-bg;
+            padding: 10px;
+            position:relative;
+            background:#fcfcfc;
+            box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.2);
+            -o-box-shadow: 0px 0px 1px 1px  rgba(0,0,0,0.2);
+            -moz-box-shadow: 0px 0px 1px 1px  rgba(0,0,0,0.2);
 
-    //TODO: USE IN instafeed scope
-    .polaroid:nth-child(even) {
-        transform: translateX(2px);
-        -ms-transform: rotate(-3deg); /* IE 9 */
-        -webkit-transform: rotate(-3deg); /* Safari */
-        transform: rotate(-3deg);
-        -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
-        box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+            &:before, &:after {
+                content: "";
+                position: absolute;
+                z-index: -1;
+                -ms-transform: skew(-3deg,-2deg);
+                -webkit-transform: skew(-3deg,-2deg); /* Safari and Chrome */
+                -o-transform: skew(-3deg,-2deg); /* Opera */
+                -moz-transform: skew(-3deg,-2deg); /* Firefox */
+                bottom: 14px;
+                box-shadow: 0 15px 5px rgba(0, 0, 0, 0.3);
+                height: 20px;
+                left: 1px;
+                max-width: 50%;
+                width: 50%;
+            }
+            &:after {
+                -ms-transform: skew(3deg,2deg); /* IE 9 */
+                -webkit-transform: skew(3deg,2deg); /* Safari and Chrome */
+                -o-transform: skew(3deg,2deg); /* Opera */
+                -moz-transform: skew(3deg,2deg); /* Firefox */
+                left: auto;
+                right: 1px;
+            }
+
+            img {
+                width:100%;
+                //TODO: USE MIXIN... Same Border for all elements?
+                border-radius: 2px 2px 2px 2px;
+                -moz-border-radius: 2px 2px 2px 2px;
+                -webkit-border-radius: 2px 2px 2px 2px;
+                margin-bottom: 10px;
+            }
+
+            span {
+                //TODO: Might use these settings in the future to achieve a better polaroid look
+                //            overflow:hidden;
+                //            white-space: nowrap;
+                //            text-overflow: ellipsis;
+                //            width:inherit;
+            }
+
+            a {
+                //TODO: USE VARIABLE
+                color: black;
+                text-decoration: none;
+            }
+
+        }
     }
 }
+
+

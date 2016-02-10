@@ -2,51 +2,208 @@
 /*
     Main file to be compiled by sass
 */
+@font-face {
+  font-family: 'Indie Flower';
+  src: url("../fonts/IndieFlower.ttf"); }
+.navbar {
+  margin-bottom: 0 !important;
+  height: 60px; }
+  .navbar a, .navbar .navbar-brand {
+    padding-top: 20px !important;
+    height: 60px; }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: #3C3C3C; }
+  h1 a:hover, h1 a:active, h1 a:focus, h2 a:hover, h2 a:active, h2 a:focus, h3 a:hover, h3 a:active, h3 a:focus, h4 a:hover, h4 a:active, h4 a:focus, h5 a:hover, h5 a:active, h5 a:focus, h6 a:hover, h6 a:active, h6 a:focus {
+    text-decoration: none;
+    color: #090909; }
+
 #instafeed {
-  padding-left: 20px;
-  padding-right: 20px; }
-  #instafeed .polaroid {
-    font-family: "Indie Flower", cursive;
-    background-color: #FFFFFD;
-    padding: 10px;
-    margin-bottom: 7px;
-    border-radius: 2px 2px 2px 2px;
-    -moz-border-radius: 2px 2px 2px 2px;
-    -webkit-border-radius: 2px 2px 2px 2px; }
-    #instafeed .polaroid img {
-      border-radius: 2px 2px 2px 2px;
-      -moz-border-radius: 2px 2px 2px 2px;
-      -webkit-border-radius: 2px 2px 2px 2px;
-      margin-bottom: 10px; }
-    #instafeed .polaroid a {
-      color: black;
-      text-decoration: none; }
-  #instafeed .polaroid:nth-child(odd) {
-    transform: translateX(-50px);
-    -ms-transform: rotate(5deg);
-    /* IE 9 */
-    -webkit-transform: rotate(5deg);
-    /* Safari */
-    transform: rotate(5deg);
-    -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2); }
-  #instafeed .polaroid:nth-child(even) {
-    transform: translateX(2px);
-    -ms-transform: rotate(-3deg);
-    /* IE 9 */
-    -webkit-transform: rotate(-3deg);
-    /* Safari */
-    transform: rotate(-3deg);
-    -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2); }
+  margin-top: 50px; }
+  #instafeed .polaroid-container {
+    position: relative; }
+    #instafeed .polaroid-container .tape {
+      position: absolute;
+      top: -15px;
+      height: 40px;
+      background-color: #fff;
+      opacity: 0.6;
+      border-left: 1px dashed rgba(0, 0, 0, 0.1);
+      border-right: 1px dashed rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0px 0px 1px 0px #cccccc;
+      -moz-box-shadow: 0px 0px 1px 0px #cccccc;
+      box-shadow: 0px 0px 1px 0px #cccccc; }
+      #instafeed .polaroid-container .tape:nth-child(odd) {
+        width: 50%;
+        right: 60px;
+        -webkit-transform: rotate(-2deg) skew(0, 0) translate(0%, -5px);
+        -moz-transform: rotate(-2deg) skew(0, 0) translate(0%, -5px);
+        -o-transform: rotate(-2deg) skew(0, 0) translate(0%, -5px);
+        transform: rotate(-2deg) skew(0, 0) translate(0%, -5px); }
+      #instafeed .polaroid-container .tape:nth-child(even) {
+        width: 40%;
+        right: 70px;
+        -webkit-transform: rotate(-2deg) skew(0, 0) translate(0%, -5px);
+        -moz-transform: rotate(-2deg) skew(0, 0) translate(0%, -5px);
+        -o-transform: rotate(-2deg) skew(0, 0) translate(0%, -5px);
+        transform: rotate(-2deg) skew(0, 0) translate(0%, -5px); }
+    #instafeed .polaroid-container:nth-child(odd) {
+      padding-left: 20px;
+      -ms-transform: rotate(5deg);
+      /* IE 9 */
+      -webkit-transform: rotate(5deg);
+      /* Safari */
+      transform: rotate(5deg);
+      margin-bottom: 15px; }
+    #instafeed .polaroid-container:nth-child(even) {
+      padding-left: 30px;
+      -ms-transform: rotate(-3deg);
+      /* IE 9 */
+      -webkit-transform: rotate(-3deg);
+      /* Safari */
+      transform: rotate(-3deg);
+      margin-bottom: 20px; }
+    #instafeed .polaroid-container .polaroid {
+      font-family: "Indie Flower", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background-color: #FFFFFD;
+      padding: 10px;
+      position: relative;
+      background: #fcfcfc;
+      box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
+      -o-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.2); }
+      #instafeed .polaroid-container .polaroid:before, #instafeed .polaroid-container .polaroid:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        -ms-transform: skew(-3deg, -2deg);
+        -webkit-transform: skew(-3deg, -2deg);
+        /* Safari and Chrome */
+        -o-transform: skew(-3deg, -2deg);
+        /* Opera */
+        -moz-transform: skew(-3deg, -2deg);
+        /* Firefox */
+        bottom: 14px;
+        box-shadow: 0 15px 5px rgba(0, 0, 0, 0.3);
+        height: 20px;
+        left: 1px;
+        max-width: 50%;
+        width: 50%; }
+      #instafeed .polaroid-container .polaroid:after {
+        -ms-transform: skew(3deg, 2deg);
+        /* IE 9 */
+        -webkit-transform: skew(3deg, 2deg);
+        /* Safari and Chrome */
+        -o-transform: skew(3deg, 2deg);
+        /* Opera */
+        -moz-transform: skew(3deg, 2deg);
+        /* Firefox */
+        left: auto;
+        right: 1px; }
+      #instafeed .polaroid-container .polaroid img {
+        width: 100%;
+        border-radius: 2px 2px 2px 2px;
+        -moz-border-radius: 2px 2px 2px 2px;
+        -webkit-border-radius: 2px 2px 2px 2px;
+        margin-bottom: 10px; }
+      #instafeed .polaroid-container .polaroid a {
+        color: black;
+        text-decoration: none; }
 
 article img {
   width: 100%; }
 article .post-next-prev {
   margin-bottom: 15px; }
 
+#map {
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  -webkit-border-bottom-left-radius: 250px;
+  -moz-border-radius-bottomleft: 250px;
+  border-bottom-left-radius: 250px;
+  -webkit-box-shadow: -5px 5px 74px -15px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -5px 5px 74px -15px rgba(0, 0, 0, 0.75);
+  box-shadow: -5px 5px 74px -15px rgba(0, 0, 0, 0.75);
+  border: 0;
+  opacity: 0.7; }
+  #map:hover {
+    opacity: 1; }
+
+.jumbotron {
+  margin-bottom: 30px;
+  vertical-align: middle;
+  text-align: left; }
+
+.pagination {
+  position: relative;
+  width: 100%;
+  margin: 4rem auto;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3rem;
+  color: #9EABB3;
+  text-align: center; }
+
+.pagination a {
+  color: #9EABB3;
+  transition: all 0.2s ease; }
+
+.pagination a:hover {
+  text-decoration: none; }
+
+.older-posts,
+.newer-posts {
+  position: absolute;
+  display: inline-block;
+  padding: 10px 15px;
+  border: #bfc8cd 1px solid;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: border 0.3s ease; }
+
+.page-number {
+  display: inline-block;
+  padding: 2px 0;
+  min-width: 100px; }
+
+.older-posts {
+  right: 0; }
+
+.newer-posts {
+  left: 0; }
+
+.older-posts:hover,
+.newer-posts:hover {
+  color: #889093;
+  border-color: #98a0a4; }
+
+.extra-pagination {
+  display: none;
+  border-bottom: #EBF2F6 1px solid; }
+
+.extra-pagination:after {
+  display: block;
+  content: "";
+  width: 7px;
+  height: 7px;
+  border: #E7EEF2 1px solid;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  margin-left: -5px;
+  background: #FFF;
+  border-radius: 100%;
+  box-shadow: #FFF 0 0 0 5px; }
+
+.extra-pagination .pagination {
+  width: auto; }
+
+@media only screen and (max-width: 500px) {
+  .pagination {
+    width: auto;
+    margin: 2rem auto; } }
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
@@ -1120,7 +1277,7 @@ body {
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
-  background-color: #FFFAE6; }
+  background-color: #F9F9F9; }
 
 input,
 button,
@@ -1158,7 +1315,7 @@ img {
 .img-thumbnail {
   padding: 4px;
   line-height: 1.42857;
-  background-color: #FFFAE6;
+  background-color: #F9F9F9;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: all 0.2s ease-in-out;
@@ -1200,7 +1357,7 @@ hr {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: "Quando", serif;
+  font-family: "Quando", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.1;
   color: inherit; }
@@ -2267,7 +2424,7 @@ th {
   .table > tbody + tbody {
     border-top: 2px solid #ddd; }
   .table .table {
-    background-color: #FFFAE6; }
+    background-color: #F9F9F9; }
 
 .table-condensed > thead > tr > th,
 .table-condensed > thead > tr > td,
@@ -3657,7 +3814,7 @@ tbody.collapse.in {
         border-color: #eeeeee #eeeeee #ddd; }
     .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
       color: #555555;
-      background-color: #FFFAE6;
+      background-color: #F9F9F9;
       border: 1px solid #ddd;
       border-bottom-color: transparent;
       cursor: default; }
@@ -3715,7 +3872,7 @@ tbody.collapse.in {
     .nav-tabs.nav-justified > .active > a:hover,
     .nav-tabs-justified > .active > a:focus,
     .nav-tabs.nav-justified > .active > a:focus {
-      border-bottom-color: #FFFAE6; } }
+      border-bottom-color: #F9F9F9; } }
 
 .tab-content > .tab-pane {
   display: none; }
@@ -4378,7 +4535,7 @@ a.badge:hover, a.badge:focus {
   padding: 4px;
   margin-bottom: 20px;
   line-height: 1.42857;
-  background-color: #FFFAE6;
+  background-color: #F9F9F9;
   border: 1px solid #ddd;
   border-radius: 4px;
   -webkit-transition: border 0.2s ease-in-out;

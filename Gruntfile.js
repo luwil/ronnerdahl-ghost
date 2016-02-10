@@ -54,7 +54,7 @@ var _              = require('lodash'),
                         'content/themes/ronnerdahl-casper/assets/js/*.js',
                         'core/built/assets/*.js',
                         'core/client/dist/index.html',
-                        'content/themes/bootstrap-ghost/assets/css/*.css'
+                        'content/themes/bootstrap-ghost/assets/sass/*.scss'
                     ],
                     options: {
                         livereload: true

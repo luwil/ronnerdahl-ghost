@@ -1,0 +1,18 @@
+#map {
+    height: $rd-map-height;
+    width: $rd-map-width;
+    position:absolute;
+    top:0px;
+    right:0px;
+    -webkit-border-bottom-left-radius: $rd-map-width;
+    -moz-border-radius-bottomleft: $rd-map-width;
+    border-bottom-left-radius: $rd-map-width;
+    -webkit-box-shadow: -5px 5px 74px -15px rgba(0,0,0,0.75);
+    -moz-box-shadow: -5px 5px 74px -15px rgba(0,0,0,0.75);
+    box-shadow: -5px 5px 74px -15px rgba(0,0,0,0.75);
+    border: 0;
+    opacity:0.7;
+    &:hover {
+      opacity: 1;
+    }
+}
