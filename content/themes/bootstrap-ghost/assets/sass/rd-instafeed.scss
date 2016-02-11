@@ -39,6 +39,7 @@
 
         &:nth-child(odd) {
             padding-left: 20px;
+            padding-right:10px;
             -ms-transform: rotate(5deg); /* IE 9 */
             -webkit-transform: rotate(5deg); /* Safari */
             transform: rotate(5deg);
@@ -47,6 +48,7 @@
 
         &:nth-child(even) {
             padding-left:30px;
+            padding-right:15px;
             -ms-transform: rotate(-3deg); /* IE 9 */
             -webkit-transform: rotate(-3deg); /* Safari */
             transform: rotate(-3deg);

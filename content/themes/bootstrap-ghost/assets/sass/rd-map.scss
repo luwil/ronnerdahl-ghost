@@ -1,18 +1,107 @@
-#map {
-    height: $rd-map-height;
-    width: $rd-map-width;
-    position:absolute;
-    top:0px;
-    right:0px;
-    -webkit-border-bottom-left-radius: $rd-map-width;
-    -moz-border-radius-bottomleft: $rd-map-width;
-    border-bottom-left-radius: $rd-map-width;
-    -webkit-box-shadow: -5px 5px 74px -15px rgba(0,0,0,0.75);
-    -moz-box-shadow: -5px 5px 74px -15px rgba(0,0,0,0.75);
-    box-shadow: -5px 5px 74px -15px rgba(0,0,0,0.75);
-    border: 0;
-    opacity:0.7;
-    &:hover {
-      opacity: 1;
+#map-container {
+    transform: rotate(-1deg);
+    background-image: -webkit-linear-gradient(
+        hsla(0,0%,0%,.3),
+        hsla(0,0%,100%,.7) 33%,
+        hsla(0,0%,0%,.3) 33%,
+        hsla(0,0%,100%,.7) 67%,
+        hsla(0,0%,0%,.3) 67%,
+        hsla(0,0%,100%,.7));
+    box-shadow: inset 0 0 0 .1em hsla(0,0%,0%,.1),
+    inset 0 0 1em hsla(0,0%,0%,.05),
+    0 .1em .25em hsla(0,0%,0%,.5);
+    height: 300px;
+    width:100%;
+    border-bottom-right-radius: 500px 20px;
+
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        -ms-transform: skew(-3deg,-2deg);
+        -webkit-transform: skew(-3deg,-2deg); /* Safari and Chrome */
+        -o-transform: skew(-3deg,-2deg); /* Opera */
+        -moz-transform: skew(-3deg,-2deg); /* Firefox */
+        bottom: 14px;
+        box-shadow: 0 15px 5px rgba(0, 0, 0, 0.3);
+        height: 20px;
+        left: 1px;
+        max-width: 90%;
+        width: 70%;
+    }
+    &:after {
+        -ms-transform: skew(3deg,2deg); /* IE 9 */
+        -webkit-transform: skew(3deg,2deg); /* Safari and Chrome */
+        -o-transform: skew(3deg,2deg); /* Opera */
+        -moz-transform: skew(3deg,2deg); /* Firefox */
+        left: auto;
+        right: 4px;
+        width:90%;
+        bottom:10px;
+
+    }
+
+    .tape-left {
+             position: absolute;
+             top: -15px;
+             left:-30px;
+             height: 40px;
+             width:40%;
+             background-color: #fff;
+             opacity: 0.6;
+             border-left: 1px dashed rgba(0, 0, 0, 0.1);
+             border-right: 1px dashed rgba(0, 0, 0, 0.1);
+             -webkit-box-shadow: 0px 0px 1px 0px #cccccc;
+             -moz-box-shadow: 0px 0px 1px 0px #cccccc;
+             box-shadow: 0px 0px 1px 0px #cccccc;
+             -webkit-transform: rotate(-5deg) skew(0,0) translate(0%,-5px);
+             -moz-transform: rotate(-5deg) skew(0,0) translate(0%,-5px);
+             -o-transform: rotate(-5deg) skew(0,0) translate(0%,-5px);
+             transform: rotate(-5deg) skew(0,0) translate(0%,-5px);
+         }
+    .tape-left-2 {
+        position: absolute;
+        top: 14px;
+        left:-50px;
+        height: 40px;
+        width:42%;
+        background-color: #fff;
+        opacity: 0.6;
+        border-left: 1px dashed rgba(0, 0, 0, 0.1);
+        border-right: 1px dashed rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: 0px 0px 1px 0px #cccccc;
+        -moz-box-shadow: 0px 0px 1px 0px #cccccc;
+        box-shadow: 0px 0px 1px 0px #cccccc;
+        -webkit-transform: rotate(-4deg) skew(0,0) translate(0%,-4px);
+        -moz-transform: rotate(-4deg) skew(0,0) translate(0%,-4px);
+        -o-transform: rotate(-4deg) skew(0,0) translate(0%,-4px);
+        transform: rotate(1deg) skew(0,0) translate(0%,1px);
+    }
+    .tape-right {
+        position: absolute;
+        top: -20px;
+        right: -40px;
+        height: 40px;
+        width:35%;
+        background-color: #fff;
+        opacity: 0.6;
+        border-left: 1px dashed rgba(0, 0, 0, 0.1);
+        border-right: 1px dashed rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: 0px 0px 1px 0px #cccccc;
+        -moz-box-shadow: 0px 0px 1px 0px #cccccc;
+        box-shadow: 0px 0px 1px 0px #cccccc;
+        -webkit-transform: rotate(7deg) skew(0,0) translate(0%,7px);
+        -moz-transform: rotate(7deg) skew(0,0) translate(0%,7px);
+        -o-transform: rotate(7deg) skew(0,0) translate(0%,7px);
+        transform: rotate(7deg) skew(0,0) translate(0%,7px);
     }
 }
+
+#map {
+    width: inherit;
+    height: inherit;
+    opacity: 0.85;
+    border-bottom-right-radius: 500px 20px;
+}
+
+
