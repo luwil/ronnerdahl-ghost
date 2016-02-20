@@ -1,5 +1,5 @@
 #map-container {
-    transform: rotate(-1deg);
+//    transform: rotate(-1deg);
     background-image: -webkit-linear-gradient(
         hsla(0,0%,0%,.3),
         hsla(0,0%,100%,.7) 33%,
@@ -12,7 +12,7 @@
     0 .1em .25em hsla(0,0%,0%,.5);
     height: 300px;
     width:100%;
-    border-bottom-right-radius: 500px 20px;
+//    border-bottom-right-radius: 500px 20px;
 
     &:before, &:after {
         content: "";
@@ -101,7 +101,7 @@
     width: inherit;
     height: inherit;
     opacity: 0.85;
-    border-bottom-right-radius: 500px 20px;
+//    border-bottom-right-radius: 500px 20px;
 }
 
 
